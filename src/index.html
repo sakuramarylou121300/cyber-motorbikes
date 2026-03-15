@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cyber Motorbikes</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/resources/css/app.css" />
+</head>
+    <body class="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+        <div class="w-full max-w-2xl mx-auto">
+        <!-- Header -->
+        <div class="header-gradient rounded-t-2xl px-6 pt-8 pb-10 text-center text-white">
+            <div class="flex items-center justify-center gap-2 mb-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5.5" cy="17.5" r="2.5"/><circle cx="18.5" cy="17.5" r="2.5"/>
+                <path d="M8 17.5h7M5.5 15l2-5h7l2 3.5"/>
+                <path d="M14 10l1-3h3"/>
+            </svg>
+            <h1 class="text-xl font-extrabold tracking-wide uppercase">Cyber Motorbikes</h1>
+            </div>
+            <p class="text-blue-200 text-sm font-medium tracking-widest uppercase">Bacolod City</p>
+        </div>
+    
+        <!-- Main Card -->
+        <div class="card-bg rounded-b-2xl shadow-2xl -mt-4 px-6 pb-8 pt-6">
+            <!-- Tab Switcher -->
+            <div class="flex bg-gray-100 rounded-xl p-1 gap-1 mb-6">
+            <button
+                id="tab-secbank"
+                onclick="switchTab('secbank')"
+                class="tab-btn active-secbank flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-sm font-semibold"
+            >
+                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg,#36B37E,#0052CC);">
+                <span class="text-white font-bold text-xs">S</span>
+                </div>
+                Security Bank
+            </button>
+            <button
+                id="tab-gcash"
+                onclick="switchTab('gcash')"
+                class="tab-btn flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg text-sm font-semibold text-gray-500"
+            >
+                <!-- GCash "G" logo approximation -->
+                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:#007AE5;">
+                <span class="text-white font-bold text-xs">G</span>
+                </div>
+                GCash
+            </button>
+            </div>
+    
+            <!-- Security Bank Tab -->
+            <div id="content-secbank" class="tab-content active">
+    
+            <!-- Security Bank Badge -->
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div class="w-7 h-7 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg,#36B37E,#0052CC);">
+                <span class="text-white font-bold text-sm">S</span>
+                </div>
+                <span class="text-lg font-bold" style="color:#0052CC;">SECURITY BANK</span>
+            </div>
+    
+            <!-- TID -->
+            <div class="text-center mb-5">
+                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full tracking-widest border border-blue-200">
+                TID : 25020541
+                </span>
+            </div>
+    
+            <div class="border-t border-blue-100 mb-5"></div>
+    
+            <!-- QR Code -->
+            <div class="flex flex-col items-center">
+                <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold mb-3">Scan to Pay</p>
+                <div class="bg-white rounded-2xl p-4 qr-glow qr-pulse">
+                <img
+                    src="/img/secbank.jpg"
+                    alt="Security Bank QR Code"
+                    class="w-48 h-48 object-contain rounded-lg"
+                />
+                </div>
+            </div>
+            </div>
+    
+            <!-- Gcash Tab -->
+            <div id="content-gcash" class="tab-content">
+    
+            <!-- GCash Badge -->
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:#007AE5;">
+                <span class="text-white font-extrabold text-base">G</span>
+                </div>
+                <span class="text-lg font-bold" style="color:#007AE5;">GCash</span>
+            </div>
+    
+            <!-- Account info placeholder -->
+            <div class="text-center mb-5">
+                <span class="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full tracking-widest border border-blue-200">
+                    Cyber Motorbikes
+                </span>
+            </div>
+    
+            <div class="border-t border-blue-100 mb-5"></div>
+    
+            <!-- GCash QR Code -->
+            <div class="flex flex-col items-center">
+                <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold mb-3">Scan to Pay</p>
+                <div class="bg-white rounded-2xl p-4 qr-glow-gcash qr-pulse-gcash">
+                <img
+                    src="/img/gcash.jpg"
+                    alt="GCash QR Code"
+                    class="w-48 h-48 object-contain rounded-lg"
+                />
+                    </div>
+            </div>
+            </div>
+    
+            <!-- How to Pay -->
+            <div class="border-t border-blue-100 my-5"></div>
+            <div class="space-y-3">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest text-center mb-2">How to Pay</p>
+            <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">1</span>
+                <p class="text-sm text-gray-600">Open your banking or e-wallet app (GCash, Maya, UnionBank, etc.)</p>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">2</span>
+                <p class="text-sm text-gray-600">Tap <strong>Scan QR</strong> and point your camera at the code above.</p>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">3</span>
+                <p class="text-sm text-gray-600">Enter the amount, confirm, and you're done!</p>
+            </div>
+            </div>
+    
+        </div>
+    
+        <!-- Footer -->
+        <p class="text-center text-gray-400 text-xs mt-4">
+            Powered by <span class="font-semibold" style="color:#0052CC;">Security Bank</span> &amp;
+            <span class="font-semibold" style="color:#007AE5;">GCash</span> · QRPh Standard
+        </p>
+    
+        </div>
+        
+        <script>
+            function switchTab(tab) {
+                // Hide all content
+                document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+                // Remove active styles from all buttons
+                document.getElementById('tab-secbank').classList.remove('active-secbank', 'active-gcash', 'text-gray-500');
+                document.getElementById('tab-gcash').classList.remove('active-secbank', 'active-gcash', 'text-gray-500');
+        
+                // Show selected content and style button
+                document.getElementById('content-' + tab).classList.add('active');
+                if (tab === 'secbank') {
+                document.getElementById('tab-secbank').classList.add('active-secbank');
+                document.getElementById('tab-gcash').classList.add('text-gray-500');
+                } else {
+                document.getElementById('tab-gcash').classList.add('active-gcash');
+                document.getElementById('tab-secbank').classList.add('text-gray-500');
+                }
+            }
+        </script>
+    
+    </body>
+</html>
